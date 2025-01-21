@@ -46,6 +46,14 @@ print('\n=========================================')
 
 
 """
-Упорядочивание списка
+Упорядочивание спиcка
 """
+
+names.sort()
+print(names)
+names.sort(reverse=True)
+print(names)
+
+print(f'Этот список временно отсортирован {sorted(names)}')
+print(f'оригинал списка {names}')
 
