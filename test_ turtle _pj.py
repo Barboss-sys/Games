@@ -5,7 +5,6 @@ radius = turtle.numinput('Требуются размеры , Введите р�
 turtle.circle(radius)
 
 
-turtle.done
 
 
-
+turtle.mainloop()
