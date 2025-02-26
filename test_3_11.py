@@ -13,9 +13,6 @@ def main():
           f'Федератьный налог ${fed_tax:,.2f}\n'
           f'Общий налог ${(fed_tax + reg_tax):,.2f}\n'
           f'Общая сумма продаж ${(bay + reg_tax + fed_tax):,.2f}')
-    
-
-    
 
 def input_bay():
     bay_count = float(input('Введите стоитмость покупки: '))

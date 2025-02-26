@@ -1,43 +1,47 @@
 
 
-income = 0
-spot = 0
+
 
 def main():
     print('Программа подсчета сидячих мест')
-    chanch_spot()
-    #price_b = spots(spot)
-
-    print(f'общий доход от проданных билетов ${price_b}')
-
-
+    total = chanch_spot()
+    col_income = calc_b(total)
+    print(f'общий доход от проданных билетов ${col_income:,.2f}')
 
 
 def chanch_spot():
     print('Для выхода нажмите "z"')
-
-    while spot != 'z' or 'Z':
+    spotss = []
+    total = []
+    while 'z' not in spotss:
         spot = input('Введите категорию сидячего места A / B / C: ')
-    #return spot
-
-
-    #def spots(spot):
-        if spot == 'a' or spot == 'A':
-            price_b = 20
-
+        if spot == 'a' or spot =='A':
+            total += spot
         elif spot == 'b' or spot == 'B':
-            price_b = 15
-
+            total += spot
         elif spot == 'c' or spot == 'C':
-            price_b = 10
-
+            total += spot
         elif spot == 'z' or spot == 'Z':
-            print('ВЫХОД!!!')
-
+            spotss.append('z')
+            print('ВЫХОД!!!!')
         else:
-            print('Не корректные данные!!!')
+            print('Недопустимое значение!!!!')
+    return total
 
+def spots(spot):
+    if spot == 'a' or spot == 'A':
+        price_b = 20
+    elif spot == 'b' or spot == 'B':
+        price_b = 15
+    else:
+        price_b = 10
     return price_b
+
+def calc_b(total):
+    income = 0
+    for i in total:
+        income += spots(i)
+    return income
 
 
 main()
