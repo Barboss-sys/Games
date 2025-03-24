@@ -3,9 +3,6 @@ import random
 ROWS = 3
 COLS = 4
 
-
-
-
 def main():
     matrix = list1()
     result = list2(matrix)
@@ -19,13 +16,13 @@ def list1():
             matrix_list[r][c] = random.randint(1, 100)
     return matrix_list
 
-
 def list2(arg_list):
     result = []
     for i in arg_list:
         for c in i:
             result.append(c)
     return result
+
 
 if __name__ == '__main__':
     main()
