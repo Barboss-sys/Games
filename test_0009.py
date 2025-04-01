@@ -10,7 +10,7 @@ def main():
         print(f'Все числа в матрице: {value}')
 
 def list1():
-    matrix_list = [[r * c for c in range(4)] for r in range(3)]
+    matrix_list = [[r * c for c in range(COLS)] for r in range(ROWS)]
     for r in range(ROWS):
         for c in range(COLS):
             matrix_list[r][c] = random.randint(1, 100)
